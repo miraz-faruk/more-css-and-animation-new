@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+        @keyframes sliding {
+            0% {
+                background-color: yellow;
+                left: 0;
+                top: 0;
+            }
+
+            25% {
+                background-color: orangered;
+                top: 400px;
+            }
+
+            50% {
+                background-color: green;
+                top: 0;
+            }
+
+            75% {
+                background-color: magenta;
+                top: 400px;
+            }
+
+            100% {
+                background-color: blue;
+                left: 900px;
+                top: 0;
+            }
+
+        }
+
+        .stage {
+            width: 1000px;
+            height: 500px;
+            background-color: lightblue;
+        }
+
+        .ball {
+            width: 100px;
+            height: 100px;
+            border-radius: 50px;
+            background-color: yellow;
+            position: relative;
+            animation: sliding 5s ease-in-out 1s infinite alternate;
+            animation-play-state: running;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Now I want to create a bouncing ball</h1>
+    <div class="stage">
+        <div class="ball"></div>
+    </div>
+
+</body>
+
+</html>
